@@ -11,7 +11,7 @@ export default function Section({
 	return (
 		<>
 			<section
-				className="h-[100dvh] pt-[10vh] mx-8 md:mx-28 snap-start"
+				className="h-[90vh] md:h-[100vh] pt-[10vh] mx-8 md:mx-28 snap-start"
 				id={id}>
 				<div className="w-full relative flex justify-center items-start h-[15%]">
 					{prevSection && (
