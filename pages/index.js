@@ -4,9 +4,11 @@ import CardButton from '../components/card-button'
 import Header from '../components/header'
 import Section from '../components/section'
 import SocialButton from '../components/social-button'
+import BurgerMenu from '../components/burger-menu'
 
 export default function Home() {
 	const [darkToggle, setDarkToggle] = useState(false)
+	const [isToggleMenu, setIsToggleMenu] = useState(false)
 
 	const manageDarkToggle = () => setDarkToggle(!darkToggle)
 
@@ -25,8 +27,19 @@ export default function Home() {
 				<title>Natalia del Barco</title>
 			</Head>
 			<div className={` ${darkToggle && 'dark'}`}>
-				<main className="bg-[url('/prtfolio/img/FondoHiFi.jpg')] bg-no-repeat m-0 dark:bg-[url('/prtfolio/img/FondoLoFi.jpg')] w-full bg-cover h-full">
-					<Header toggleCallback={manageDarkToggle} />
+				<main className="bg-[url('/prtfolio/img/FondoHiFi.webp')] bg-no-repeat m-0 dark:bg-[url('/prtfolio/img/FondoLoFi.webp')] w-full bg-cover h-full bg-top">
+					<Header
+						toggleCallback={manageDarkToggle}
+						isToggleMenu={isToggleMenu}
+						manageToggleMenu={() => setIsToggleMenu(!isToggleMenu)}
+					/>
+					<BurgerMenu
+						isVisibleMenu={isToggleMenu}
+						textStyle={textStyle}
+						handleClickCloseMenu={() =>
+							setIsToggleMenu(!isToggleMenu)
+						}
+					/>
 					{/* Portada */}
 					<Section
 						nextSection="Sobre mí"

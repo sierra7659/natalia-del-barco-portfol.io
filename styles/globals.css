@@ -5,16 +5,19 @@
 @font-face {
     font-family: Bukowski-Regular;
     src: url('/prtfolio/fonts/Bukowski-Regular.otf');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: Poppins-Regular;
     src: url('/prtfolio/fonts/Poppins-Regular.ttf');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: Poppins-Bold;
-    src: url('/prtfolio/fonts/Poppins-Bold.ttf')
+    src: url('/prtfolio/fonts/Poppins-Bold.ttf');
+    font-display: fallback;
 }
 
 html {

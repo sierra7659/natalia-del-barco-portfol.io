@@ -5,7 +5,7 @@ export default function ToggleTheme({ callback }) {
 				<label
 					htmlFor="toggle"
 					className="flex items-center cursor-pointer">
-					<div className="mr-3 text-gray-700 font-medium text-xs md:text-lg">
+					<div className="mr-3 text-gray-700 font-medium text-md md:text-lg">
 						Hi-fi
 					</div>
 
@@ -16,11 +16,11 @@ export default function ToggleTheme({ callback }) {
 							className="sr-only"
 							onClick={callback}
 						/>
-						<div className="block bg-[#B4AAF1] w-6 h-4 md:w-14 md:h-8 rounded-full"></div>
-						<div className="dot absolute left-1 top-1 bg-white w-2 h-2 md:w-6 md:h-6 rounded-full transition"></div>
+						<div className="block bg-[#B4AAF1] w-10 h-6 md:w-14 md:h-8 rounded-full"></div>
+						<div className="dot absolute left-1 top-1 bg-white w-4 h-4 md:w-6 md:h-6 rounded-full transition"></div>
 					</div>
-					<div className="ml-3 text-gray-700 font-medium text-xs md:text-lg">
-						Low-fi
+					<div className="ml-3 text-gray-700 font-medium text-md md:text-lg">
+						Lo-fi
 					</div>
 				</label>
 			</div>
