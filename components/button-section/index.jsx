@@ -5,7 +5,7 @@ export default function ButtonSection({ text, isPrev }) {
 		<>
 			<div className="flex flex-col align-center justify-center">
 				{isPrev && (
-					<div className="flex w-full mx-auto justify-center mt-8 animate-bounce">
+					<div className="flex w-full mx-auto justify-center mt-8 mb-2 animate-bounce">
 						<Image
 							src="/prtfolio/icons/downArrow.svg"
 							width={20}
@@ -16,7 +16,7 @@ export default function ButtonSection({ text, isPrev }) {
 				)}
 				<span>{text}</span>
 				{!isPrev && (
-					<div className="flex w-full mx-auto justify-center mt-5 animate-bounce">
+					<div className="flex w-full mx-auto justify-center mt-3 animate-bounce">
 						<Image
 							src="/prtfolio/icons/downArrow.svg"
 							alt=""
