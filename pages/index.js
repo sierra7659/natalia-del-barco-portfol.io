@@ -25,7 +25,7 @@ export default function Home() {
 				<title>Natalia del Barco</title>
 			</Head>
 			<div className={` ${darkToggle && 'dark'}`}>
-				<main className="bg-[url('/prtfolio/img/FondoHiFi.wp2')] bg-no-repeat m-0 dark:bg-[url('/prtfolio/img/FondoLoFi.jpg')] w-full bg-cover h-full">
+				<main className="bg-[url('/prtfolio/img/FondoHiFi.jpg')] bg-no-repeat m-0 dark:bg-[url('/prtfolio/img/FondoLoFi.jpg')] w-full bg-cover h-full">
 					<Header toggleCallback={manageDarkToggle} />
 					{/* Portada */}
 					<Section
@@ -82,7 +82,7 @@ export default function Home() {
 									</p>
 								</div>
 								<div className="flex items-center -mt-14 md:my-0 w-full md:w-1/2 h-full justify-center md:justify-between mx-auto md:ml-32">
-									<div className="bg-[url('/prtfolio/img/PerfilHiFi.png')] dark:bg-[url('/prtfolio/img/PerfilLoFi.png')] h-48 w-48 md:h-[30rem] md:w-[30rem] bg-contain bg-no-repeat"></div>
+									<div className="bg-[url('/prtfolio/img/PerfilHiFi.webp')] dark:bg-[url('/prtfolio/img/PerfilLoFi.webp')] h-48 w-48 md:h-[30rem] md:w-[30rem] bg-contain bg-no-repeat"></div>
 								</div>
 							</div>
 						</div>
