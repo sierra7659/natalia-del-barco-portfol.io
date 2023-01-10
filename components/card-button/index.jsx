@@ -25,10 +25,10 @@ export default function CardButton({
 						isAlternative
 							? isLofi
 								? 'bg-transparent border-2 border-black text-transparent'
-								: "bg-[url('/img/DisenoGrafico.jpg')]"
+								: "bg-[url('/prtfolio/img/DisenoGrafico.jpg')]"
 							: isLofi
 							? 'bg-transparent border-2 border-black text-transparent'
-							: "bg-[url('/img/UX:UI.jpg')]"
+							: "bg-[url('/prtfolio/img/UX:UI.jpg')]"
 					}
                 bg-cover
                 flex

@@ -5,7 +5,7 @@ export default function ButtonSection({ text, isPrev }) {
 				{isPrev && (
 					<div className="flex w-full mx-auto justify-center mt-8 animate-bounce">
 						<img
-							src="/icons/downArrow.svg"
+							src="/prtfolio/icons/downArrow.svg"
 							className="rotate-180"
 						/>
 					</div>
@@ -13,7 +13,7 @@ export default function ButtonSection({ text, isPrev }) {
 				<span>{text}</span>
 				{!isPrev && (
 					<div className="flex w-full mx-auto justify-center mt-5 animate-bounce">
-						<img src="/icons/downArrow.svg" alt="" />
+						<img src="/prtfolio/icons/downArrow.svg" alt="" />
 					</div>
 				)}
 			</div>

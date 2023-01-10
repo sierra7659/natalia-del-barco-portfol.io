@@ -25,7 +25,7 @@ export default function Home() {
 				<title>Natalia del Barco</title>
 			</Head>
 			<div className={` ${darkToggle && 'dark'}`}>
-				<main className="bg-[url('/img/FondoHiFi.jpg')] bg-no-repeat m-0 dark:bg-[url('/img/FondoLoFi.jpg')] w-full bg-cover h-full">
+				<main className="bg-[url('/prtfolio/img/FondoHiFi.jpg')] bg-no-repeat m-0 dark:bg-[url('/prtfolio/img/FondoLoFi.jpg')] w-full bg-cover h-full">
 					<Header toggleCallback={manageDarkToggle} />
 					{/* Portada */}
 					<Section
@@ -82,7 +82,7 @@ export default function Home() {
 									</p>
 								</div>
 								<div className="flex items-center -mt-14 md:my-0 w-full md:w-1/2 h-full justify-center md:justify-between mx-auto md:ml-32">
-									<div className="bg-[url('/img/PerfilHiFi.png')] dark:bg-[url('/img/PerfilLoFi.png')] h-48 w-48 md:h-[30rem] md:w-[30rem] bg-contain bg-no-repeat"></div>
+									<div className="bg-[url('/prtfolio/img/PerfilHiFi.png')] dark:bg-[url('/prtfolio/img/PerfilLoFi.png')] h-48 w-48 md:h-[30rem] md:w-[30rem] bg-contain bg-no-repeat"></div>
 								</div>
 							</div>
 						</div>
@@ -128,32 +128,32 @@ export default function Home() {
 						</div>
 						<div className="flex gap-5  h-5 mt-24 justify-center items-center">
 							<SocialButton
-								bg="/icons/Linkedin.svg"
-								bgLofi="/icons/LinkedinLo.svg"
+								bg="/prtfolio/icons/Linkedin.svg"
+								bgLofi="/prtfolio/icons/LinkedinLo.svg"
 								isLofi={darkToggle}
 								href="https://www.linkedin.com/in/natalia-del-barco-rojas-product-designer/"
 							/>
 							<SocialButton
-								bg="/icons/Medium.svg"
-								bgLofi="/icons/MediumLo.svg"
+								bg="/prtfolio/icons/Medium.svg"
+								bgLofi="/prtfolio/icons/MediumLo.svg"
 								isLofi={darkToggle}
 								href="https://medium.com/@nataliadelbarcorojas"
 							/>
 							<SocialButton
-								bg="/icons/mail.svg"
-								bgLofi="/icons/MailLo.svg"
+								bg="/prtfolio/icons/mail.svg"
+								bgLofi="/prtfolio/icons/MailLo.svg"
 								isLofi={darkToggle}
 								href="mailto:nataliadelbarcodesign@gmail.com"
 							/>
 							<SocialButton
-								bg="/icons/Behance.svg"
-								bgLofi="/icons/BehanceLo.svg"
+								bg="/prtfolio/icons/Behance.svg"
+								bgLofi="/prtfolio/icons/BehanceLo.svg"
 								isLofi={darkToggle}
 								href="https://www.behance.net/nataliadelbar"
 							/>
 							<SocialButton
-								bg="/icons/Figma.svg"
-								bgLofi="/icons/FigmaLo.svg"
+								bg="/prtfolio/icons/Figma.svg"
+								bgLofi="/prtfolio/icons/FigmaLo.svg"
 								isLofi={darkToggle}
 								href="https://www.figma.com/@nataliadelbarco"
 							/>

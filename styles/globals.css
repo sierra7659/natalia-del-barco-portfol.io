@@ -4,17 +4,17 @@
 
 @font-face {
     font-family: Bukowski-Regular;
-    src: url('/fonts/Bukowski-Regular.otf');
+    src: url('/prtfolio/fonts/Bukowski-Regular.otf');
 }
 
 @font-face {
     font-family: Poppins-Regular;
-    src: url('/fonts/Poppins-Regular.ttf');
+    src: url('/prtfolio/fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
     font-family: Poppins-Bold;
-    src: url('/fonts/Poppins-Bold.ttf')
+    src: url('/prtfolio/fonts/Poppins-Bold.ttf')
 }
 
 html {
