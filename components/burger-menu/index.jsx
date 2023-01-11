@@ -23,7 +23,7 @@ export default function BurgerMenu({
 							transition={{
 								duration: 0.5
 							}}
-							className="w-3/4 h-screen pt-8 pl-8 backdrop-blur-2xl shadow-2xl">
+							className="w-3/4 h-screen pt-8 px-8 backdrop-blur-2xl shadow-2xl">
 							<div>
 								<div
 									className="ml-3 cursor-pointer w-4"

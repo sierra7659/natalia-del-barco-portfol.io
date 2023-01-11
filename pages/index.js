@@ -27,7 +27,7 @@ export default function Home() {
 				<title>Natalia del Barco</title>
 			</Head>
 			<div className={` ${darkToggle && 'dark'}`}>
-				<main className="bg-[url('/prtfolio/img/FondoHiFi.webp')] bg-no-repeat m-0 dark:bg-[url('/prtfolio/img/FondoLoFi.webp')] w-full bg-cover h-full bg-top">
+				<main className="bg-[url('/prtfolio/img/FondoHiFiM.svg')] dark:bg-[url('/prtfolio/img/FondoLoFiM.svg')] md:bg-[url('/prtfolio/img/FondoHiFi.svg')] bg-no-repeat m-0 md:dark:bg-[url('/prtfolio/img/FondoLoFi.svg')] w-full bg-cover bg-top">
 					<Header
 						toggleCallback={manageDarkToggle}
 						isToggleMenu={isToggleMenu}
@@ -44,7 +44,8 @@ export default function Home() {
 					<Section
 						nextSection="Sobre mí"
 						nextSectionHref="#sobre-mi"
-						id="intro">
+						id="intro"
+						isFirstSection={true}>
 						<h1
 							className="font-serif text-4xl text-center pt-32 md:pt-0 md:text-start md:text-8xl dark:text-transparent"
 							style={textStyle}>

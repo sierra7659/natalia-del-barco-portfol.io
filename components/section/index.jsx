@@ -6,12 +6,15 @@ export default function Section({
 	prevSection,
 	prevSectionHref,
 	nextSection,
-	nextSectionHref
+	nextSectionHref,
+	isFirstSection
 }) {
 	return (
 		<>
 			<section
-				className="h-[100dvh] md:h-[100vh] pt-[10vh] mx-8 md:mx-28 snap-start transition-all"
+				className={`${
+					isFirstSection ? 'h-[90vh]' : 'h-[100vh]'
+				} md:h-[100vh] pt-[10vh] mx-8 md:mx-28 snap-start transition-all`}
 				id={id}>
 				<div className="w-full relative flex justify-center items-start h-[15%]">
 					{prevSection && (
