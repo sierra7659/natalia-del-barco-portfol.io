@@ -5,31 +5,31 @@ export default function CardButton({
 	isLofi,
 	title,
 	date,
-	routeToGo
+	routeToGo,
+	hasGoToOtherPage
 }) {
-	return (
-		<>
-			<Link href={routeToGo}>
-				<div
-					style={
-						isLofi
-							? {
-									WebkitTextStroke: '1px black'
-							  }
-							: {
-									WebkitTextStrokeWidth: 0,
-									WebkitTextStrokeColor: 'none'
-							  }
-					}
-					className={`${
-						isAlternative
-							? isLofi
-								? 'bg-transparent border-2 border-black text-transparent'
-								: "bg-[url('/prtfolio/img/UX_UI.webp')]"
-							: isLofi
+	const getCardButton = () => {
+		return (
+			<div
+				style={
+					isLofi
+						? {
+								WebkitTextStroke: '1px black'
+						  }
+						: {
+								WebkitTextStrokeWidth: 0,
+								WebkitTextStrokeColor: 'none'
+						  }
+				}
+				className={`${
+					isAlternative
+						? isLofi
 							? 'bg-transparent border-2 border-black text-transparent'
-							: "bg-[url('/prtfolio/img/DisenoGrafico.webp')]"
-					}
+							: "bg-[url('/prtfolio/img/UX_UI.webp')]"
+						: isLofi
+						? 'bg-transparent border-2 border-black text-transparent'
+						: "bg-[url('/prtfolio/img/DisenoGrafico.webp')]"
+				}
                 bg-cover
                 flex
                 flex-col
@@ -37,15 +37,33 @@ export default function CardButton({
                 items-center
                 hover:cursor-pointer
 					w-40 h-40
-				md:w-64 md:h-64
-				 mt-[-10vh] shadow transition-all duration-300 hover:w-36 hover:h-36 md:hover:w-72 md:hover:h-72 hover:shadow-2xl rounded-3xl select-none`}>
-					<div className="w-full text-center">
-						<span className="font-serif text-2xl select-none">
-							{title}
-						</span>
-					</div>
+				md:w-56 md:h-56 shadow transition-all duration-300 hover:w-36 hover:h-36 md:hover:w-52 md:hover:h-52 hover:shadow-2xl rounded-3xl select-none`}>
+				<div
+					className={`w-full flex items-center justify-center ${
+						date && 'h-[66%]'
+					} text-center px-8`}>
+					<span
+						className={`font-serif text-2xl ${
+							date && 'mt-[33%]'
+						} select-none`}>
+						{title}
+					</span>
 				</div>
-			</Link>
+				{date && (
+					<div className="pt-4 h-[33%] font-serif w-full text-right pr-6">
+						<span className="md:text-xl">{date}</span>
+					</div>
+				)}
+			</div>
+		)
+	}
+	return (
+		<>
+			{hasGoToOtherPage ? (
+				<Link href={routeToGo}>{getCardButton()}</Link>
+			) : (
+				<a href={`${routeToGo}`}>{getCardButton()}</a>
+			)}
 		</>
 	)
 }

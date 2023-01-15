@@ -1,5 +1,8 @@
 import ToggleTheme from '../toggle-theme'
 import Image from 'next/image'
+import { delay, motion } from 'framer-motion'
+import ButtonSection from '../button-section'
+import { animationOpacitySettings } from '../../modules/animation/opacity'
 
 export default function Header({
 	toggleCallback,
@@ -9,7 +12,10 @@ export default function Header({
 	const genericHamburgerLine = `h-[0.2rem] w-6 my-[0.1rem] rounded-full bg-black transition ease transform z-30 duration-300`
 	return (
 		<>
-			<header className="fixed top-0 w-full flex h-[10vh] backdrop-blur-2xl md:px-10 px-2 items-center justify-between z-10 shadow-md">
+			<motion.header
+				{...animationOpacitySettings}
+				transition={{ delay: 2, duration: 2 }}
+				className="fixed top-0 w-full flex h-[10vh] backdrop-blur-2xl md:px-10 px-2 items-center justify-between z-10 shadow-md">
 				<div className="hidden md:flex justify-between gap-2 md:gap-8 md:text-xl text-sm">
 					<a href="#sobre-mi">
 						<div className="flex flex-row pb-1 gap-4 items-center border-transparent border-b-2 hover:border-black transition-all duration-500">
@@ -75,7 +81,7 @@ export default function Header({
 				<div className="mt-12 mr-4">
 					<ToggleTheme callback={toggleCallback} />
 				</div>
-			</header>
+			</motion.header>
 		</>
 	)
 }
