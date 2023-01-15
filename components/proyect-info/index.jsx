@@ -6,7 +6,7 @@ export default function ProyectInfo({ duration, typeOfWork, role }) {
 			<div className="h-14 flex gap-2 items-center justify-between w-full rounded-2xl">
 				<div className="flex flex-row items-center gap-2  text-left ">
 					<Image
-						src="/prtfolio/icons/proyectoReloj.svg"
+						src="/prtfolio/icons/ProyectoReloj.svg"
 						width={25}
 						height={25}
 					/>
@@ -16,7 +16,7 @@ export default function ProyectInfo({ duration, typeOfWork, role }) {
 				</div>
 				<div className="flex flex-row items-center gap-2  text-left ">
 					<Image
-						src="/prtfolio/icons/proyectoMaletin.svg"
+						src="/prtfolio/icons/ProyectoMaletin.svg"
 						width={25}
 						height={25}
 					/>
@@ -26,7 +26,7 @@ export default function ProyectInfo({ duration, typeOfWork, role }) {
 				</div>
 				<div className="flex flex-row items-center gap-2  text-left ">
 					<Image
-						src="/prtfolio/icons/proyectoPersonas.svg"
+						src="/prtfolio/icons/ProyectoPersonas.svg"
 						width={25}
 						height={25}
 					/>

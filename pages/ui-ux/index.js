@@ -47,7 +47,7 @@ export default function UIUX() {
 								})}
 							</div>
 						</section>
-						<div className="snap-y">
+						<div>
 							{proyectsUI_UX.map((proyect, index) => {
 								const prevProyect = proyectsUI_UX[index - 1]
 								const nextProyect = proyectsUI_UX[index + 1]
