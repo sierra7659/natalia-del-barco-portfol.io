@@ -11,6 +11,7 @@ export default function ButtonSection({ text, isPrev }) {
 							width={20}
 							height={20}
 							className="rotate-180"
+							alt="Sección Previa"
 						/>
 					</div>
 				)}
@@ -19,7 +20,7 @@ export default function ButtonSection({ text, isPrev }) {
 					<div className="flex w-full mx-auto justify-center mt-3 animate-bounce">
 						<Image
 							src="/prtfolio/icons/downArrow.svg"
-							alt=""
+							alt="Siguiente Sección"
 							width={20}
 							height={20}
 						/>

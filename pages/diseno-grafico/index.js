@@ -6,9 +6,9 @@ import SectionItem from '../../components/section-item'
 import CardButton from '../../components/card-button'
 import SocialButton from '../../components/social-button'
 import ButtonSection from '../../components/button-section'
-import { proyectsUI_UX } from '../../modules/proyects/ui-ux/proyectsEnum'
+import { proyectsDisenoGrafico } from '../../modules/proyects/diseno-grafico/proyectsEnum'
 
-export default function UIUX() {
+export default function DisenoGrafico({}) {
 	return (
 		<>
 			<AnimatePresence>
@@ -34,24 +34,32 @@ export default function UIUX() {
 									Proyectos
 								</span>
 							</div>
-							<div className="grid grid-cols-2 md:grid-cols-3 justify-items-center md:px-32 gap-8 md:w-full mt-20 justify-center">
-								{proyectsUI_UX.map((proyect, index) => {
-									return (
-										<CardButton
-											key={index}
-											title={proyect.title}
-											date={proyect.date}
-											isAlternative={index % 2 === 0}
-											routeToGo={`#${proyect.title}`}
-										/>
-									)
-								})}
+							<div className="flex h-4/5 justify-center items-center">
+								<div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center md:px-[5vw] gap-8 md:w-full justify-center">
+									{proyectsDisenoGrafico.map(
+										(proyect, index) => {
+											return (
+												<CardButton
+													key={proyect.title}
+													title={proyect.title}
+													date={proyect.date}
+													isAlternative={
+														index % 2 === 0
+													}
+													routeToGo={`#${proyect.title}`}
+												/>
+											)
+										}
+									)}
+								</div>
 							</div>
 						</section>
 						<div>
-							{proyectsUI_UX.map((proyect, index) => {
-								const prevProyect = proyectsUI_UX[index - 1]
-								const nextProyect = proyectsUI_UX[index + 1]
+							{proyectsDisenoGrafico.map((proyect, index) => {
+								const prevProyect =
+									proyectsDisenoGrafico[index - 1]
+								const nextProyect =
+									proyectsDisenoGrafico[index + 1]
 
 								const {
 									title,
@@ -60,14 +68,14 @@ export default function UIUX() {
 									role,
 									typeOfWork,
 									content,
-									figmaLink,
-									mediumLink
+									behanceLink,
+									externalLink
 								} = proyect
 
 								return (
 									<SectionItem
-										id={title}
 										key={title}
+										id={title}
 										title={title}
 										isImageInRight={index % 2 !== 0}
 										imageSrc={imageSrc}
@@ -75,8 +83,8 @@ export default function UIUX() {
 										role={role}
 										typeOfWork={typeOfWork}
 										content={content}
-										figmaLink={figmaLink}
-										mediumLink={mediumLink}
+										behanceLink={behanceLink}
+										externalLink={externalLink}
 										prevProyect={
 											prevProyect
 												? prevProyect.title

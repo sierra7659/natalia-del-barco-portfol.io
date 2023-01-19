@@ -36,8 +36,8 @@ export default function CardButton({
                 justify-center
                 items-center
                 hover:cursor-pointer
-					w-40 h-40
-				md:w-56 md:h-56 shadow transition-all duration-300 hover:w-36 hover:h-36 md:hover:w-52 md:hover:h-52 hover:shadow-2xl rounded-3xl select-none`}>
+				w-40 h-40
+				md:w-56 md:h-56 shadow transition-all duration-300 hover:w-36 hover:h-36 md:hover:w-[13.5rem] md:hover:h-[13.5rem] hover:shadow-2xl rounded-3xl select-none`}>
 				<div
 					className={`w-full flex items-center justify-center ${
 						date && 'h-[66%]'

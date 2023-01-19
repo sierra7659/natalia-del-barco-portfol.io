@@ -30,6 +30,7 @@ export default function BurgerMenu({
 									onClick={handleClickCloseMenu}>
 									<Image
 										src="/prtfolio/icons/close.png"
+										alt="cerrar menú"
 										width="20"
 										height="20"
 									/>

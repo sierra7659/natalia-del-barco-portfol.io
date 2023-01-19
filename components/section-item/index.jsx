@@ -15,6 +15,8 @@ export default function SectionItem({
 	isImageInRight,
 	figmaLink,
 	mediumLink,
+	behanceLink,
+	externalLink,
 	prevProyect,
 	prevProyectHref,
 	nextProyect,
@@ -44,7 +46,7 @@ export default function SectionItem({
 				transition={{ duration: 1 }}
 				className="h-[80dvh]">
 				<div className="md:hidden flex h-[80dvh] flex-col items-center mx-8">
-					<div className="w-[40vw] h-[40vw] my-5">
+					<div className="w-40 h-40 md:w-[40vw] md:h-[40vw] my-5">
 						<div
 							style={{
 								backgroundImage: `url(${imageSrc})`
@@ -61,7 +63,7 @@ export default function SectionItem({
 							role={role}
 						/>
 						<p className="mt-3 text-sm">{content}</p>
-						<div className="flex flex-row gap-4 mt-6">
+						<div className="flex flex-row justify-center gap-4 mt-4">
 							{mediumLink && (
 								<SocialButton
 									bg="/prtfolio/icons/Medium.svg"
@@ -72,6 +74,20 @@ export default function SectionItem({
 								<SocialButton
 									bg="/prtfolio/icons/Figma.svg"
 									href={figmaLink}
+								/>
+							)}
+							{behanceLink && (
+								<SocialButton
+									bg="/prtfolio/icons/Behance.svg"
+									href={behanceLink}
+									isProyect
+								/>
+							)}
+							{externalLink && (
+								<SocialButton
+									bg="/prtfolio/icons/Link2.svg"
+									href={externalLink}
+									isProyect
 								/>
 							)}
 						</div>
@@ -90,18 +106,19 @@ export default function SectionItem({
 						{/* Title*/}
 						<div className="w-1/2">
 							<div className="mt-10">
-								<span className="font-serif text-7xl">
+								<p className="font-serif text-center text-5xl w-4/5">
 									{title}
-								</span>
-								<div className="w-2/3 mt-10">
+								</p>
+								<div className="w-4/5 mt-5">
 									<ProyectInfo
 										duration={duration}
 										typeOfWork={typeOfWork}
 										role={role}
 									/>
 								</div>
-								<p className="pr-32 mt-5">{content}</p>
-								<div className="flex flex-row gap-4 mt-6">
+								<p className="mt-2 text-md w-4/5">{content}</p>
+								<p className="text-sm mt-8">Enlaces:</p>
+								<div className="flex flex-row gap-4 mt-2 w-4/5">
 									{mediumLink && (
 										<SocialButton
 											bg="/prtfolio/icons/Medium.svg"
@@ -113,6 +130,20 @@ export default function SectionItem({
 										<SocialButton
 											bg="/prtfolio/icons/Figma.svg"
 											href={figmaLink}
+											isProyect
+										/>
+									)}
+									{behanceLink && (
+										<SocialButton
+											bg="/prtfolio/icons/Behance.svg"
+											href={behanceLink}
+											isProyect
+										/>
+									)}
+									{externalLink && (
+										<SocialButton
+											bg="/prtfolio/icons/Link2.svg"
+											href={externalLink}
 											isProyect
 										/>
 									)}
@@ -125,18 +156,24 @@ export default function SectionItem({
 						{/* Title*/}
 						<div className="w-1/2 pl-32">
 							<div className="mt-10">
-								<span className="font-serif text-7xl">
+								<p className="font-serif text-center text-5xl w-full">
 									{title}
-								</span>
-								<div className="w-4/5 mt-10">
+								</p>
+								<div className="w-full mt-5">
 									<ProyectInfo
 										duration={duration}
 										typeOfWork={typeOfWork}
 										role={role}
 									/>
 								</div>
-								<p className="mt-5">{content}</p>
-								<div className="flex flex-row gap-4 mt-6">
+								<p className="mt-2 text-md">{content}</p>
+								{(mediumLink ||
+									figmaLink ||
+									behanceLink ||
+									externalLink) && (
+									<p className="text-sm mt-8">Enlaces:</p>
+								)}
+								<div className="flex flex-row gap-4 mt-2 w-4/5">
 									{mediumLink && (
 										<SocialButton
 											bg="/prtfolio/icons/Medium.svg"
@@ -148,6 +185,20 @@ export default function SectionItem({
 										<SocialButton
 											bg="/prtfolio/icons/Figma.svg"
 											href={figmaLink}
+											isProyect
+										/>
+									)}
+									{behanceLink && (
+										<SocialButton
+											bg="/prtfolio/icons/Behance.svg"
+											href={behanceLink}
+											isProyect
+										/>
+									)}
+									{externalLink && (
+										<SocialButton
+											bg="/prtfolio/icons/Link2.svg"
+											href={externalLink}
 											isProyect
 										/>
 									)}

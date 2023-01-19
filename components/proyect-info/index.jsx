@@ -9,6 +9,7 @@ export default function ProyectInfo({ duration, typeOfWork, role }) {
 						src="/prtfolio/icons/ProyectoReloj.svg"
 						width={25}
 						height={25}
+						alt="Tiempo de proyecto"
 					/>
 					<span className="text-xs md:text-lg text-center">
 						{duration}
@@ -19,6 +20,7 @@ export default function ProyectInfo({ duration, typeOfWork, role }) {
 						src="/prtfolio/icons/ProyectoMaletin.svg"
 						width={25}
 						height={25}
+						alt="Rol desempeñado"
 					/>
 					<span className="text-xs md:text-lg text-center">
 						{role}
@@ -29,6 +31,7 @@ export default function ProyectInfo({ duration, typeOfWork, role }) {
 						src="/prtfolio/icons/ProyectoPersonas.svg"
 						width={25}
 						height={25}
+						alt="Modalidad de trabajo"
 					/>
 					<span className="text-xs md:text-lg text-center">
 						{typeOfWork}

@@ -131,13 +131,14 @@ export default function Home() {
 									isAlternative="true"
 									title="UX UI"
 									isLofi={darkToggle}
-									hasGoToOtherPage={true}
+									hasGoToOtherPage
 									routeToGo="/ui-ux"
 								/>
 								<CardButton
 									title="Diseño Gráfico"
 									isLofi={darkToggle}
-									routeToGo=""
+									hasGoToOtherPage
+									routeToGo="/diseno-grafico"
 								/>
 							</div>
 						</Section>
