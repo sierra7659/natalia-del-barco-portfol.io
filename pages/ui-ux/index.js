@@ -7,10 +7,14 @@ import CardButton from '../../components/card-button'
 import SocialButton from '../../components/social-button'
 import ButtonSection from '../../components/button-section'
 import { proyectsUI_UX } from '../../modules/proyects/ui-ux/proyectsEnum'
+import Head from 'next/head'
 
 export default function UIUX() {
 	return (
 		<>
+			<Head>
+				<title>Proyectos UX/UI</title>
+			</Head>
 			<AnimatePresence>
 				<motion.main
 					{...animationOpacitySettings}

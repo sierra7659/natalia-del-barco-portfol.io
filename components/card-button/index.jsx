@@ -24,10 +24,10 @@ export default function CardButton({
 				className={`${
 					isAlternative
 						? isLofi
-							? 'bg-transparent border-2 border-black text-transparent'
+							? 'bg-white border-2 border-black text-transparent'
 							: "bg-[url('/prtfolio/img/UX_UI.webp')]"
 						: isLofi
-						? 'bg-transparent border-2 border-black text-transparent'
+						? 'bg-white border-2 border-black text-transparent'
 						: "bg-[url('/prtfolio/img/DisenoGrafico.webp')]"
 				}
                 bg-cover

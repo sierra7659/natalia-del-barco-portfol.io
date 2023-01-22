@@ -7,21 +7,14 @@ import Section from '../components/section'
 import SocialButton from '../components/social-button'
 import BurgerMenu from '../components/burger-menu'
 import { animationOpacitySettings } from '../modules/animation/opacity'
+import { getTextStyle } from '../modules/style/textStyle'
+import useCtxDark from '../hooks/theme/useLofiThemeState'
+import Title from '../components/title'
 
 export default function Home() {
-	const [darkToggle, setDarkToggle] = useState(false)
+	const [lofiToggle] = useCtxDark()
 	const [isToggleMenu, setIsToggleMenu] = useState(false)
-
-	const manageDarkToggle = () => setDarkToggle(!darkToggle)
-
-	const textStyle = darkToggle
-		? {
-				WebkitTextStroke: '1px black'
-		  }
-		: {
-				WebkitTextStrokeWidth: 0,
-				WebkitTextStrokeColor: 'none'
-		  }
+	const textStyle = getTextStyle(lofiToggle)
 
 	return (
 		<>
@@ -31,10 +24,9 @@ export default function Home() {
 			<AnimatePresence>
 				<motion.div
 					{...animationOpacitySettings}
-					className={` ${darkToggle && 'dark'}`}>
+					className={` ${lofiToggle && 'dark'}`}>
 					<main className="bg-[url('/prtfolio/img/FondoHiFiM.svg')] dark:bg-[url('/prtfolio/img/FondoLoFiM.svg')] md:bg-[url('/prtfolio/img/FondoHiFi.svg')] bg-no-repeat m-0 md:dark:bg-[url('/prtfolio/img/FondoLoFi.svg')] w-full bg-cover bg-top">
 						<Header
-							toggleCallback={manageDarkToggle}
 							isToggleMenu={isToggleMenu}
 							manageToggleMenu={() =>
 								setIsToggleMenu(!isToggleMenu)
@@ -73,11 +65,7 @@ export default function Home() {
 								<div className="flex flex-col md:flex-row items-center h-full">
 									<div className="w-full -mt-8 md:mt-0 md:w-1/2">
 										<div className="md:pt-4">
-											<span
-												className="font-serif text-4xl md:text-8xl dark:text-transparent transition-all duration-200"
-												style={textStyle}>
-												Sobre mí
-											</span>
+											<Title>Sobre mí</Title>
 										</div>
 
 										<p className="md:mr-12 pt-4 pr-4 md:pt-10 pb-20 text-sm md:text-lg">
@@ -120,23 +108,19 @@ export default function Home() {
 							nextSectionHref="#contacta-conmigo"
 							id="proyectos">
 							<div className="w-full flex justify-center">
-								<span
-									className="font-serif text-4xl md:text-8xl dark:text-transparent transition-all duration-200"
-									style={textStyle}>
-									Proyectos
-								</span>
+								<Title>Proyectos</Title>
 							</div>
 							<div className="w-full h-full flex md:flex-row flex-col justify-evenly items-center">
 								<CardButton
 									isAlternative="true"
-									title="UX UI"
-									isLofi={darkToggle}
+									title="UX/UI"
+									isLofi={lofiToggle}
 									hasGoToOtherPage
 									routeToGo="/ui-ux"
 								/>
 								<CardButton
 									title="Diseño Gráfico"
-									isLofi={darkToggle}
+									isLofi={lofiToggle}
 									hasGoToOtherPage
 									routeToGo="/diseno-grafico"
 								/>
@@ -147,41 +131,37 @@ export default function Home() {
 							prevSectionHref="#proyectos"
 							id="contacta-conmigo">
 							<div className="w-full pt-20 mx-auto text-center">
-								<span
-									className="font-serif px-2 md:px-0 text-4xl md:text-8xl dark:text-transparent transition-all duration-200"
-									style={textStyle}>
-									¡Contacta conmigo!
-								</span>
+								<Title>¡Contacta conmigo!</Title>
 							</div>
 							<div className="flex gap-5  h-5 mt-24 justify-center items-center">
 								<SocialButton
 									bg="/prtfolio/icons/Linkedin.svg"
 									bgLofi="/prtfolio/icons/LinkedinLo.svg"
-									isLofi={darkToggle}
+									isLofi={lofiToggle}
 									href="https://www.linkedin.com/in/natalia-del-barco-rojas-product-designer/"
 								/>
 								<SocialButton
 									bg="/prtfolio/icons/Medium.svg"
 									bgLofi="/prtfolio/icons/MediumLo.svg"
-									isLofi={darkToggle}
+									isLofi={lofiToggle}
 									href="https://medium.com/@nataliadelbarcorojas"
 								/>
 								<SocialButton
 									bg="/prtfolio/icons/mail.svg"
 									bgLofi="/prtfolio/icons/MailLo.svg"
-									isLofi={darkToggle}
+									isLofi={lofiToggle}
 									href="mailto:nataliadelbarcodesign@gmail.com"
 								/>
 								<SocialButton
 									bg="/prtfolio/icons/Behance.svg"
 									bgLofi="/prtfolio/icons/BehanceLo.svg"
-									isLofi={darkToggle}
+									isLofi={lofiToggle}
 									href="https://www.behance.net/nataliadelbar"
 								/>
 								<SocialButton
 									bg="/prtfolio/icons/Figma.svg"
 									bgLofi="/prtfolio/icons/FigmaLo.svg"
-									isLofi={darkToggle}
+									isLofi={lofiToggle}
 									href="https://www.figma.com/@nataliadelbarco"
 								/>
 							</div>

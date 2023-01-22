@@ -1,14 +1,9 @@
 import ToggleTheme from '../toggle-theme'
 import Image from 'next/image'
-import { delay, motion } from 'framer-motion'
-import ButtonSection from '../button-section'
+import { motion } from 'framer-motion'
 import { animationOpacitySettings } from '../../modules/animation/opacity'
 
-export default function Header({
-	toggleCallback,
-	isToggleMenu,
-	manageToggleMenu
-}) {
+export default function Header({ isToggleMenu, manageToggleMenu }) {
 	const genericHamburgerLine = `h-[0.2rem] w-6 my-[0.1rem] rounded-full bg-black transition ease transform z-30 duration-300`
 	return (
 		<>
@@ -78,8 +73,8 @@ export default function Header({
 						/>
 					</button>
 				</div>
-				<div className="mt-12 mr-4">
-					<ToggleTheme callback={toggleCallback} />
+				<div className="mr-4">
+					<ToggleTheme />
 				</div>
 			</motion.header>
 		</>
