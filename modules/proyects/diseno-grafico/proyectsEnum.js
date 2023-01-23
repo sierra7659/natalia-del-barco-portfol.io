@@ -1,7 +1,7 @@
 export const proyectsDisenoGrafico = [
 	{
 		title: 'Terretup',
-		date: 'Jul. 2022',
+		date: 'May. 2021',
 		imageSrc: '/prtfolio/img/Terretup.jpg',
 		duration: '1 mes',
 		role: 'Graphic Designer',
@@ -13,7 +13,7 @@ export const proyectsDisenoGrafico = [
 	},
 	{
 		title: 'Coopernic',
-		date: 'Nov. 2022',
+		date: 'Mar. 2021',
 		imageSrc: '/prtfolio/img/Coopernic.jpg',
 		duration: '1 mes',
 		role: 'Graphic Designer',
@@ -25,24 +25,21 @@ export const proyectsDisenoGrafico = [
 	},
 	{
 		title: 'Correos',
-		date: 'Nov. 2022',
+		date: 'Feb. 2021',
 		imageSrc: '/prtfolio/img/Correos.jpg',
 		duration: '15 días',
 		role: 'Graphic Designer',
-		typeOfWork: 'Grupal',
+		typeOfWork: 'Dupla',
 		behanceLink:
 			'https://www.behance.net/gallery/161717655/Correos-cartas-que-valen-oro',
 		content:
 			'Dupla creativa para la realización de campaña publicitaria contra el olvido sufrido por las personas de la tercera edad, que incrementó con las medidas sanitarias del Covid-19. Nuestra propuesta consiste en crear amigos por correspondencia, jóvenes y mayores se verán involucrados en escribir cartas para escuchar, comprender y aprender de ellos a través de sus medios de comunicación. Hacerles saber que estamos interesados por saber de ellos y hacerles ver que no son invisibles y que nos importan. Con este proyecto de publicidad se llevó a cabo un spot publicitario, ilustración de los personajes de nuestra baraja y el prototipo de la campaña en web. ¡Toda la información gráfica del proyecto en Behance!'
 	},
 	{
-		title: 'Comercial Pazos',
-		date: 'Oct. 2022',
-		imageSrc: '/prtfolio/img/ComercialPazos.png',
-		duration: '15 días',
-		role: 'Product Designer',
-		typeOfWork: 'Grupal',
+		title: 'Más Diseño Gráfico',
+		date: '2018/2023',
+		imageSrc: '/prtfolio/img/masDisenoGrafico.jpg',
 		content:
-			'Un proyecto de rediseño de un e-commerce dedicado a la venta de herramientas para profesionales de la artesanía en madera. Los usuarios necesitan encontrar sus herramientas profesionales para la madera pero tienen dificultad de navegar por la web de Comercial Pazos, ya que tiene más de una veintena de categorías. ¿Cómo podemos mejorar la experiencia del usuario comprando online?'
+			'Tras 5 años de trayectoria dentro del diseño he podido realizar trabajos tan interesantes como identidades corporativas, maquetación, packaging, fotografía, animación 3D, realidad virtual, diseño web en wordpress o desde cero (con HTML, CSS y PHP), señalética, publicidad, motion graphics... Aquí os traigo un recopilatorio de varios de ellos.'
 	}
 ]

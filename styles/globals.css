@@ -38,3 +38,8 @@ input:checked~.block {
     background-color: white;
     outline: 1px solid black;
 }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 0px;
+}

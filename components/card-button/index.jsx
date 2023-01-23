@@ -6,28 +6,19 @@ export default function CardButton({
 	title,
 	date,
 	routeToGo,
-	hasGoToOtherPage
+	hasGoToOtherPage,
+	isCardProject
 }) {
 	const getCardButton = () => {
 		return (
 			<div
-				style={
-					isLofi
-						? {
-								WebkitTextStroke: '1px black'
-						  }
-						: {
-								WebkitTextStrokeWidth: 0,
-								WebkitTextStrokeColor: 'none'
-						  }
-				}
 				className={`${
 					isAlternative
 						? isLofi
-							? 'bg-white border-2 border-black text-transparent'
+							? 'bg-white border-2 border-black'
 							: "bg-[url('/prtfolio/img/UX_UI.webp')]"
 						: isLofi
-						? 'bg-white border-2 border-black text-transparent'
+						? 'bg-white border-2 border-black'
 						: "bg-[url('/prtfolio/img/DisenoGrafico.webp')]"
 				}
                 bg-cover
@@ -36,8 +27,16 @@ export default function CardButton({
                 justify-center
                 items-center
                 hover:cursor-pointer
+				shadow-xl
+				dark:shadow-none
+				dark:hover:shadow-lofi
 				w-40 h-40
-				md:w-56 md:h-56 shadow transition-all duration-300 hover:w-36 hover:h-36 md:hover:w-[13.5rem] md:hover:h-[13.5rem] hover:shadow-2xl rounded-3xl select-none`}>
+				${
+					isCardProject
+						? 'md:w-72 md:h-72 md:hover:w-[18rem] md:hover:h-[18rem]'
+						: 'md:w-56 md:h-56 md:hover:w-[13.5rem] md:hover:h-[13.5rem]'
+				}
+				 transition-all duration-300 hover:w-36 hover:h-36 hover:shadow-2xl rounded-3xl select-none`}>
 				<div
 					className={`w-full flex items-center justify-center ${
 						date && 'h-[66%]'

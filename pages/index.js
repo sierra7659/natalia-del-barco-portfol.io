@@ -62,13 +62,13 @@ export default function Home() {
 							nextSectionHref="#proyectos"
 							id="sobre-mi">
 							<div>
-								<div className="flex flex-col md:flex-row items-center h-full">
-									<div className="w-full -mt-8 md:mt-0 md:w-1/2">
+								<div className="flex flex-col md:flex-row items-center justify-center h-full">
+									<div className="w-full md:h-[60vh] -mt-8 md:mt-0 md:w-1/2">
 										<div className="md:pt-4">
 											<Title>Sobre mí</Title>
 										</div>
 
-										<p className="md:mr-12 pt-4 pr-4 md:pt-10 pb-20 text-sm md:text-lg">
+										<p className="md:mr-12 pt-4 pr-4 md:pt-10 md:h-[55vh] md:overflow-y-scroll pb-20 text-sm md:text-md lg:text-lg">
 											Me llamo Natalia, soy{' '}
 											<b className="font-bold">
 												Diseñadora Gráfica
@@ -110,19 +110,21 @@ export default function Home() {
 							<div className="w-full flex justify-center">
 								<Title>Proyectos</Title>
 							</div>
-							<div className="w-full h-full flex md:flex-row flex-col justify-evenly items-center">
+							<div className="w-full h-full flex md:flex-row flex-col justify-evenly md:justify-center md:gap-12 md:-mt-5 items-center">
 								<CardButton
 									isAlternative="true"
 									title="UX/UI"
 									isLofi={lofiToggle}
 									hasGoToOtherPage
 									routeToGo="/ui-ux"
+									isCardProject
 								/>
 								<CardButton
 									title="Diseño Gráfico"
 									isLofi={lofiToggle}
 									hasGoToOtherPage
 									routeToGo="/diseno-grafico"
+									isCardProject
 								/>
 							</div>
 						</Section>
@@ -156,7 +158,7 @@ export default function Home() {
 									bg="/prtfolio/icons/Behance.svg"
 									bgLofi="/prtfolio/icons/BehanceLo.svg"
 									isLofi={lofiToggle}
-									href="https://www.behance.net/nataliadelbar"
+									href="https://www.behance.net/nataliadelbarcorojas"
 								/>
 								<SocialButton
 									bg="/prtfolio/icons/Figma.svg"

@@ -6,6 +6,8 @@ export const proyectsUI_UX = [
 		duration: '15 días',
 		role: 'Product Designer',
 		typeOfWork: 'Individual',
+		linkedInLink:
+			'https://www.linkedin.com/feed/update/urn:li:activity:7010886285489762304/',
 		mediumLink:
 			'https://medium.com/@nataliadelbarcorojas/custom-lego-5085af87ed9c',
 		figmaLink:

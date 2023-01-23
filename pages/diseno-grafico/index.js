@@ -23,13 +23,18 @@ export default function DisenoGrafico() {
 					<motion.main
 						{...animationOpacitySettings}
 						id="proyectos"
-						className="bg-[url(/prtfolio/img/proyectosHifi.svg)] dark:bg-[url(/prtfolio/img/proyectosLofi.svg)] bg-no-repeat m-0 bg-cover w-screen">
+						className="bg-[url(/prtfolio/img/ProyectosDGHiFi.svg)] dark:bg-[url(/prtfolio/img/ProyectosDGLoFi.svg)] bg-no-repeat m-0 bg-cover w-screen">
 						<div>
 							<ProyectHeader />
-							<section className="h-[70dvh] mb-[30dvh] md:mt-[10dvh] mx-8 text-center flex items-center justify-center md:items-start">
+							<section className="h-[70vh] mb-[30vh] md:mt-[10vh] mx-8 text-center flex items-center justify-center md:items-start">
 								<div className="flex flex-col gap-10 md:gap-20">
 									<div className="mt-10">
-										<Title>Proyectos</Title>
+										<Title notChangeStyle>Proyectos</Title>
+										<div className="block mt-2">
+											<Title notChangeStyle>
+												Diseño Grafico
+											</Title>
+										</div>
 									</div>
 									<div className="flex justify-center items-center">
 										<div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center md:px-[5vw] gap-8 md:w-full justify-center">
@@ -115,18 +120,29 @@ export default function DisenoGrafico() {
 								whileInView={{ opacity: 1 }}
 								transition={{ duration: 1 }}
 								className="w-full relative flex justify-center items-start -mt-3">
-								<a href="#Vegrows">
+								<a
+									href={`#${
+										proyectsDisenoGrafico[
+											proyectsDisenoGrafico.length - 1
+										].title
+									}`}>
 									<ButtonSection
-										text="Vegrows"
+										text={
+											proyectsDisenoGrafico[
+												proyectsDisenoGrafico.length - 1
+											].title
+										}
 										isPrev="true"
 									/>
 								</a>
 							</motion.div>
 							<section
-								className="h-[90vh] flex flex-col justify-center"
+								className="h-[80vh] flex flex-col justify-center md:justify-start"
 								id="contacta">
-								<div className="w-full pt-20 mx-auto text-center">
-									<Title>¡Contacta conmigo!</Title>
+								<div className="w-full pt-0 md:pt-40  mx-auto text-center">
+									<span className="font-serif px-2 md:px-0 text-6xl md:text-8xl transition-all duration-200">
+										¡Contacta conmigo!
+									</span>
 								</div>
 								<div className="flex gap-5  h-5 mt-24 justify-center items-center">
 									<SocialButton
